@@ -131,7 +131,8 @@ function isTriangle(a,b,c) {
  *  
  */
 function doRectanglesOverlap(rect1, rect2) {
-    throw new Error('Not implemented');
+    if ((rect2.top < (rect1.top+rect1.width)) && (rect2.left < (rect1.left+rect1.height))) return true;
+    else return false;
 }
 
 
@@ -162,7 +163,8 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+    if (Math.sqrt(Math.pow(point.x-circle.center.x, 2)+Math.pow(point.y-circle.center.y, 2)) < circle.radius) return true;
+    else return false;
 }
 
 
